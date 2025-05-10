@@ -22,7 +22,7 @@ while (i<len(osargs)):
             idctr+=1
         case "-usb":
             i+=1
-            args.append(f"-device usb-ehci -drive file={osargs[i]},format=raw,id=id{idctr},if=none -device usb-storage,drive=id{idctr},serial=nvme_{idctr}")
+            args.append(f"-device usb-ehci -drive file={osargs[i]},format=raw,id=id{idctr},if=none -device usb-storage,drive=id{idctr},serial=usb_{idctr}")
             idctr+=1
         case "-cd":
             i+=1
